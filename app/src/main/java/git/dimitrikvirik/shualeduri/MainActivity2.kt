@@ -23,7 +23,7 @@ class MainActivity2 : AppCompatActivity() {
         profileBackButton = findViewById(R.id.profileBackButton)
         textUsername = findViewById(R.id.textUsername)
 
-        val username = this.getSharedPreferences("appSharedPref",MODE_PRIVATE).getString("username", "Your name")
+        val username = this.getSharedPreferences("appSharedPref",MODE_PRIVATE).getString("username", "")
 
         textUsername.text = "Hello, $username"
 

@@ -27,15 +27,14 @@ class MainActivity : AppCompatActivity() {
 
 
         profileImgButton.setOnClickListener {
-            val sharedPref = this.getSharedPreferences("appSharedPref",Context.MODE_PRIVATE)
-
-            sharedPref.edit().putString("username", editTextUsername.text.toString()).apply()
-
             startActivity(intent)
         }
         profileNextButton.setOnClickListener {
-            deleteSharedPreferences("appSharedPref")
 
+
+            val sharedPref = this.getSharedPreferences("appSharedPref",Context.MODE_PRIVATE)
+
+            sharedPref.edit().putString("username", editTextUsername.text.toString()).apply()
             startActivity(intent)
         }
 
